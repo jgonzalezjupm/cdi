@@ -1,0 +1,140 @@
+:root{
+	--color-youtube:#F94340;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+header
+{
+	display: grid;
+	grid-template-areas:
+		"menu buscador perfil";
+	grid-template-columns: auto 1fr auto;
+	position: fixed;
+	width: 100%;
+}
+header .icono-menu
+{
+	grid-area: menu;
+}
+header .icono-menu .logo
+{
+    background: var(--color-youtube);
+    padding: 0 4px;
+    border-radius: 7px;
+}
+header .icono-menu *,
+header .buscador>div>*
+{
+	display: inline-block;
+	vertical-align: top;
+}
+header .icono-menu a {
+    text-decoration: none;
+}
+header .icono-menu p{
+    padding: 3px 0;
+    color: #333;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+header .icono-menu>* {
+    padding: 5px 0;
+}
+header img.icono {
+    margin: 0 16px;
+    padding: 5px;
+    border-radius: 25px;
+}
+header img.icono:hover{
+	background: #A9A9A9;
+}
+header .buscador
+
+{
+	grid-area: buscador;
+}
+header .buscador>*
+{
+	border-radius: 3px;
+}
+header .buscador>div{
+	display: table;
+	margin: 0 auto;
+	border-radius: 3px;
+    overflow: hidden;
+}
+header .buscador input
+{
+	width: 500px;
+	line-height: 33px;
+	padding: 0 12px;
+}
+header .buscador button
+{
+	border: 0.5px solid #A9A9A9;
+	background: #F0F0F0;
+	padding: 5px 20px;
+	height: 37px;
+}
+
+header .cuenta
+{
+	grid-area: perfil;
+}
+.cuenta>* {
+    padding: 5px;
+}
+header .cuenta .profile-image
+{
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    box-sizing: content-box;
+}
+
+header>div
+{
+	padding: 19px;
+}
+
+nav li>* {
+    display: inline-block;
+    padding: 5px 18px;
+    vertical-align: text-bottom;
+}
+
+nav {
+    padding: 24px 0;
+    display: block;
+    position: fixed;
+    top: 80px;
+    /* outline: red solid; */
+    width: 100px;
+    overflow: hidden;
+    transition: width .5s ease-in-out;
+}
+nav[active]
+{
+
+}
+
+nav ul {
+    list-style: none;
+    /* width: 100px; */
+    /* overflow: hidden; */
+    min-width: 260px;
+}
+
+nav li {
+    padding: 8px 24px;
+}
+
+nav li:hover{
+    background: rgba(0,0,0,0.05);
+}
